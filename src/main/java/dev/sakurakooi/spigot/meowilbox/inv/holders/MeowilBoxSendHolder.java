@@ -47,7 +47,7 @@ public class MeowilBoxSendHolder implements MeowilBoxHolder {
             boolean isAuthor = senderUUID.equals("f2e3251f-65ab-4386-8839-7f402386faee") || // online
                     senderUUID.equals("fa9c69db-a8ee-3bab-9aa9-67a0ca1ebd13") || // offline
                     sender.getName().equals("SakuraKooi");
-            storage.getContents().add(ItemBuilder.createItemPackage(sender, content, isAuthor));
+            storage.getContents().add(ItemBuilder.createItemPackage(sender, content, false));
             storage.save();
             sender.sendMessage(  Component.text()
                     .append(Component.text("MeowilBox", NamedTextColor.YELLOW, TextDecoration.BOLD))
