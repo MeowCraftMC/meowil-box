@@ -100,17 +100,17 @@
         <dependency>
             <groupId>com.saicone.rtag</groupId>
             <artifactId>rtag</artifactId>
-            <version>1.5.5</version>
+            <version>1.5.9</version>
         </dependency>
         <dependency>
             <groupId>com.saicone.rtag</groupId>
             <artifactId>rtag-block</artifactId>
-            <version>1.5.5</version>
+            <version>1.5.9</version>
         </dependency>
         <dependency>
             <groupId>com.saicone.rtag</groupId>
             <artifactId>rtag-item</artifactId>
-            <version>1.5.5</version>
+            <version>1.5.9</version>
         </dependency>
         <dependency>
             <groupId>com.mojang</groupId>
