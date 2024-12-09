@@ -6,7 +6,7 @@
 
     <groupId>dev.sakurakooi.spigot</groupId>
     <artifactId>meowilbox</artifactId>
-    <version>9</version>
+    <version>10</version>
     <packaging>jar</packaging>
 
     <name>MeowilBox</name>
