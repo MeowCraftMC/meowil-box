@@ -1,4 +1,4 @@
 name: MeowilBox
-version: '${project.version}'
+version: '${version}'
 main: dev.sakurakooi.spigot.meowilbox.MeowilBox
 api-version: '1.20'

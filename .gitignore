@@ -124,3 +124,5 @@ fabric.properties
 
 /.idea/
 *.iml
+.gradle/
+build/

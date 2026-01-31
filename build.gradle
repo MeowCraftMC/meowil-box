@@ -1,0 +1,62 @@
+plugins {
+    id 'java'
+    id 'com.rikonardo.papermake' version '1.0.6'
+    id 'com.gradleup.shadow' version '9.3.+'
+}
+
+group = 'dev.sakurakooi.spigot.meowilbox'
+version = '12'
+
+allprojects {
+    repositories {
+        maven {
+            name = 'PaperMC repo'
+            url = 'https://repo.papermc.io/repository/maven-public/'
+        }
+        maven {
+            name = 'dmulloy2-repo'
+            url = 'https://repo.dmulloy2.net/repository/public/'
+        }
+        maven {
+            name = 'sonatype'
+            url = 'https://oss.sonatype.org/content/groups/public/'
+        }
+        maven {
+            name = 'jitpack'
+            url = 'https://jitpack.io'
+        }
+        mavenCentral()
+    }
+
+    processResources {
+        def props = [version: version]
+        inputs.properties props
+        filteringCharset 'UTF-8'
+        filesMatching('plugin.yml') {
+            expand props
+        }
+    }
+}
+
+compileJava {
+    sourceCompatibility = JavaVersion.VERSION_21
+    targetCompatibility = JavaVersion.VERSION_21
+    options.release = 21
+}
+
+dependencies {
+    compileOnly 'org.projectlombok:lombok:1.18.38'
+    annotationProcessor 'org.projectlombok:lombok:1.18.38'
+
+    compileOnly 'io.papermc.paper:paper-api:1.21.11-R0.1-SNAPSHOT'
+
+    implementation 'com.saicone.rtag:rtag:1.5.12'
+    implementation 'com.saicone.rtag:rtag-block:1.5.12'
+    implementation 'com.saicone.rtag:rtag-item:1.5.12'
+
+    compileOnly 'org.jetbrains:annotations:24.0.0'
+    compileOnly 'com.mojang:datafixerupper:8.0.16'
+}
+
+shadowJar {
+}
